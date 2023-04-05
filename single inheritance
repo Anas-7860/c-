@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class B;
+class A{   // parent class 
+    public:
+    int a;
+    void get_value(){
+        cout<<"enter value of A :";
+        cin>>a;
+    }
+    int display(){
+        return a;
+       
+    }
+};
+class B:public A{ 
+    public:// child class or derived class 
+    int b;
+    void get_number(){
+        cout<<"enter value of B :";
+        cin>>b;
+    }
+    int show(){
+        return b;
+       
+    }
+};
+int main(){
+B obj;
+obj.get_value();
+obj.get_number();
+cout<<obj.display()<<endl;
+cout<<obj.show()<<endl;
+
+return 0;
+}
