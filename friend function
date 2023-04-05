@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class C;
+class B;
+class A{
+    int a;
+    public:
+    A(){
+        a=10;
+    }
+    friend int add(A,B,C);
+};
+class B{
+    int b;
+    public:
+    B(){
+        b=20; 
+    }
+     friend int add(A,B,C);
+};
+class C{
+    int c;
+    public:
+    C(){
+        c=30;
+    }
+    friend int add(A,B,C);
+};
+ int add(A obj1,B obj2,C obj3){
+   return obj1.a+obj2.b+obj3.c;
+}
+int main(){
+A obj1;
+B obj2;
+C obj3;
+cout<<add(obj1,obj2,obj3);
+return 0;
+}
