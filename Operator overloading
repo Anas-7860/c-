@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class A{
+    int x;
+    public:
+    A(){};
+      A (int a){
+         x=a;
+     }
+     A operator +(A v){
+         A sum;
+       return sum.x=x+v.x;
+     }
+     void display(){
+         cout<<x;
+     }
+   
+};
+int main() {
+    A a(3),a1(4);
+   A a3=a+a1;
+    a3.display();
+
+    return 0;
+}
