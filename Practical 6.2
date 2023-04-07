@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class test{
+    int n,t;
+    public:
+    test(int x=0,int y=0 ){
+      n=x;
+      t=y;
+    }
+    void getnumber();
+    int operator ++(){
+        return ++n;
+    }
+    test operator ++(int){
+       return t++;
+    }
+    void display(){
+        cout<<"after increment 1st :"<<n<<endl;
+        cout<<"after increment 2nd :"<<t<<endl;
+    }
+};
+void test::getnumber(){
+    cout<<"enter number n and t ";
+    cin>>n>>t;
+}
+
+int main() {
+    
+ test obj;
+ obj.getnumber();
+ ++obj;
+ obj++;
+ obj.display();
+
+    return 0;
+}
