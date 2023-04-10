@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class A{
+int a;
+public:
+void input(){
+
+    cin>>a;
+}
+void operator -(A v){
+int x;
+x=a-v.a;
+cout<<x<<endl;
+}
+void operator ++(){
+ ++a;
+ cout<<a;
+}
+
+};
+int main(){
+A obj1,obj2;
+cout<<"enter number 1 : ";
+obj1.input();
+cout<<"enter number 2 : ";
+obj2.input();
+cout<<"the difference is :";
+obj1-obj2;
+cout<<"first number after increment is :";
+++obj1;
+return 0;
+}
