@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class A{
+  string s;
+  public:
+  void getstr(void);
+ void chk_for_a(void);
+};
+void A::getstr(){
+   cout<<"enter string :" ;
+   cin>>s;
+};
+void A::chk_for_a(){
+    for(int i=0;i<s.length();i++){
+        if(s.at(i)=='a'){
+            cout<<"input carries an a"<<endl;
+            exit(0);
+        }
+        else cout<<"input is alright";
+        exit(0);
+    }
+}
+int main() {
+   A v;
+   v.getstr();
+   v.chk_for_a();
+
+    return 0;
+}
