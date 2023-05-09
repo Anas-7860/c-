@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+class A{
+
+public:
+
+     A(){
+
+         cout<<"hello"<<endl;
+
+     }
+
+     ~A(){
+
+         cout<<"bye"<<endl;
+
+     }
+
+};
+
+int main() {
+
+ A*ptr=new A[10];
+
+ delete []ptr;
+
+    return 0;
+
+}
