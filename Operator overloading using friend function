@@ -1,0 +1,65 @@
+#include <iostream>
+
+using namespace std;
+
+class B;
+
+class A{
+
+    int a;
+
+    public :
+
+    void geta(){
+
+       cin>>a; 
+
+    }
+
+    friend void operator +(A,B);
+
+};
+
+class B{
+
+    int b;
+
+    public :
+
+    void getb(){
+
+       cin>>b; 
+
+    }
+
+    friend void operator +(A,B);
+
+};
+
+void operator +(A v,B t){
+
+    int x;
+
+    x=v.a+t.b;
+
+    cout<<x<<endl;
+
+}
+
+int main() {
+
+  A obj1;
+
+  B obj2;
+
+  obj1.geta();
+
+  obj2.getb();
+
+  obj1+obj2;
+
+   
+
+    return 0;
+
+}
