@@ -1,0 +1,22 @@
+
+#include <iostream>
+using namespace std;
+
+class A{
+  public:
+  int a;
+  void show(){
+      cout<<"A is "<<a<<endl;
+  }
+};
+
+int main() {
+ A o,*a;
+ a=&o;
+ int A::*ptr=&A::a;
+ o.*ptr=10;
+ o.show();
+ a->*ptr=20;
+ a->show();
+    return 0;
+}
