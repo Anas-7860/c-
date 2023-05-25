@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+class B{
+    public :
+    int a=100;
+    void greater(int a){
+        if(this->a>a){
+            cout<<"greater is DATA MEMBER "<<this->a<<endl;
+        }else cout<<"greater is LOCAL VARIABLE "<<a<<endl;
+    }
+};
+int main() {
+B o;
+o.greater(400);
+    return 0;
+}
