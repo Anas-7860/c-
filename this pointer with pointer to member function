@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+
+class B{
+    public :
+    int l,b,h;
+    B(int l,int b,int h){
+        cout<<"costructor called"<<endl;
+       this-> l=l;
+       this-> b=b;
+       this-> h=h;
+    }
+  int vol(){
+      return l*b*h;
+  }
+};
+
+int main() {
+B box(5,4,6);
+B box2(5,7,6);
+B*ptr=&box2;
+cout<<box.vol()<<endl;
+cout<<ptr->vol()<<endl;
+    return 0;
+}
