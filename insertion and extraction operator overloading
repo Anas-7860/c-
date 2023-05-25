@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    int a;
+
+public:
+    friend istream &operator>>(istream &in, A &v);
+    friend ostream &operator<<(ostream &out, A &v);
+};
+ostream &operator<<(ostream &out, A &v)
+{
+    out << v.a;
+    return out;
+}
+istream &operator>>(istream &in, A &v)
+{
+    in >> v.a;
+    return in;
+}
+int main()
+{
+    A obj;
+    cout << "enter the number : ";
+    cin >> obj;
+    cout << obj << " is the number given ";
+    return 0;
+}
