@@ -1,0 +1,13 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+// swapping of two numbers
+using namespace std;
+int main(){
+int a= ,b=200 ;
+cout<<"a was "<<a<<" b was "<<b<<endl;
+ a = a-b;
+ b = a+b;
+ a =b-a;
+ cout<<"a is "<<a<<" b is "<<b;
+    return 0;
+}
